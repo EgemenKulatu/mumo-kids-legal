@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mumo Kids Cafe - KVKK ve Gizlilik Politikası"
+    />
+    <title>Mumo Kids Cafe - KVKK & Gizlilik Politikası</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #6c5ce7;
+        --secondary-color: #00b894;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
+        --bg-light: #f8f9fa;
+        --border-color: #ecf0f1;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: #ffffff;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 2rem 1rem;
+        text-align: center;
+        box-shadow: var(--shadow-lg);
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+      }
+
+      header p {
+        font-size: 1rem;
+        opacity: 0.95;
+      }
+
+      /* Navigation */
+      nav {
+        background-color: var(--bg-light);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      nav a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* Main Container */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      /* Sections */
+      section {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background-color: var(--bg-light);
+        border-radius: 8px;
+        border-left: 4px solid var(--primary-color);
+        box-shadow: var(--shadow);
+      }
+
+      section h2 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      section h3 {
+        color: var(--secondary-color);
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      section ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      section li {
+        margin-bottom: 0.8rem;
+        color: var(--text-dark);
+      }
+
+      section p {
+        margin-bottom: 1rem;
+        color: var(--text-light);
+        line-height: 1.8;
+      }
+
+      /* Contact Box */
+      .contact-box {
+        background: white;
+        border: 2px solid var(--secondary-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+
+      .contact-box a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .contact-box a:hover {
+        color: var(--primary-color);
+        transform: scale(1.05);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--text-dark);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      footer a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        header p {
+          font-size: 0.9rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        nav a {
+          display: block;
+          text-align: center;
+        }
+
+        .container {
+          padding: 1rem 0.5rem;
+        }
+
+        section {
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        section h2 {
+          font-size: 1.4rem;
+        }
+
+        section h3 {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header {
+          padding: 1.5rem 1rem;
+        }
+
+        header h1 {
+          font-size: 1.2rem;
+        }
+
+        header p {
+          font-size: 0.85rem;
+        }
+
+        section {
+          padding: 1rem;
+          border-radius: 4px;
+        }
+
+        section h2 {
+          font-size: 1.2rem;
+        }
+
+        section h3 {
+          font-size: 1rem;
+        }
+
+        .contact-box {
+          padding: 1rem;
+        }
+
+        .contact-box a {
+          font-size: 1rem;
+        }
+      }
+
+      /* Utility Classes */
+      .highlight {
+        background-color: #fff9e6;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .mt-2 {
+        margin-top: 1rem;
+      }
+
+      .mb-2 {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>🎯 Mumo Kids Cafe</h1>
+      <p>Serbest Oyun Alanı • Doğum Günü Organizasyonu • Yaratıcı Atölyeler</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#kvkk">KVKK</a></li>
+        <li><a href="#privacy">Gizlilik Politikası</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- KVKK Section -->
+      <section id="kvkk">
+        <h2>📋 Kişisel Verilerin Korunması Kanunu (KVKK)</h2>
+
+        <p>
+          Mumo Kids Cafe, kişisel verilerinizin güvenliği konusunda hassasiyet
+          göstermektedir. Bu kapsamda, 6698 sayılı Kişisel Verilerin Korunması
+          Kanunu ("KVKK") uyarınca, kişisel verileriniz aşağıda açıklanan
+          şekilde işlenmektedir.
+        </p>
+
+        <h3>1. Toplanan Veriler</h3>
+        <p>Uygulamamız üzerinden aşağıdaki veriler toplanmaktadır:</p>
+
+        <p><strong>Veliye ait veriler:</strong></p>
+        <ul>
+          <li>Ad soyad</li>
+          <li>E-posta adresi</li>
+          <li>Telefon numarası</li>
+        </ul>
+
+        <p><strong>Çocuğa ait veriler (opsiyonel):</strong></p>
+        <ul>
+          <li>Ad ve yaş</li>
+          <li>Fotoğraf (isteğe bağlı)</li>
+          <li>Sağlık notu (isteğe bağlı)</li>
+          <li>Alerji bilgisi (isteğe bağlı)</li>
+        </ul>
+
+        <h3>2. Verilerin İşlenme Amaçları</h3>
+        <p>Toplanan veriler aşağıdaki amaçlarla kullanılmaktadır:</p>
+        <ul>
+          <li>Seans ve rezervasyon işlemlerinin yönetilmesi</li>
+          <li>Çocuğa ait seansların takibi ve bilgilendirme yapılması</li>
+          <li>Seans başlangıcı ve bitişi ile ilgili bildirim gönderilmesi</li>
+          <li>Hizmet kalitesinin artırılması</li>
+        </ul>
+
+        <h3>3. Verilerin Aktarımı</h3>
+        <p>
+          <span class="highlight"
+            >Kişisel verileriniz üçüncü kişilerle paylaşılmaz.</span
+          >
+          Verileriniz yalnızca teknik altyapı kapsamında Firebase (Google Cloud)
+          üzerinde güvenli şekilde saklanmaktadır.
+        </p>
+
+        <h3>4. Veri Saklama Süresi</h3>
+        <p>
+          Verileriniz, hizmetin sağlanması süresince ve yasal yükümlülükler
+          doğrultusunda saklanır.
+        </p>
+
+        <h3>5. Kullanıcı Hakları</h3>
+        <p>KVKK kapsamında kullanıcılar:</p>
+        <ul>
+          <li>Kişisel verilerinin işlenip işlenmediğini öğrenme</li>
+          <li>Verilerinin düzeltilmesini talep etme</li>
+          <li>Verilerinin silinmesini talep etme</li>
+        </ul>
+        <p>haklarına sahiptir.</p>
+
+        <h3>6. Veri Sorumlusu</h3>
+        <p><strong>Mumo Kids Cafe</strong></p>
+        <p>
+          Serbest Oyun Alanı • Doğum Günü Organizasyonu • Yaratıcı Atölyeler
+        </p>
+      </section>
+
+      <!-- Privacy Policy Section -->
+      <section id="privacy">
+        <h2>🔒 Gizlilik Politikası</h2>
+
+        <p>
+          Bu bölüme gizlilik politikanızın detaylı versiyonunu ekleyebilirsiniz.
+          Şu an için KVKK kapsamında toplanan bilgiler yukarıda belirtilmiştir.
+        </p>
+
+        <h3>Güvenlik Önlemleri</h3>
+        <p>
+          Tüm kişisel veriler modern şifreleme teknolojileri kullanılarak
+          korunmaktadır. Firebase (Google Cloud) altyapısı endüstri
+          standartlarında güvenlik sertifikasyonlarına sahiptir.
+        </p>
+
+        <h3>Cookieler ve İzleme</h3>
+        <p>
+          Uygulamamız temel işlevsellik için gerekli olanlar dışında takip
+          amaçlı cookie kullanmamaktadır.
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>📞 İletişim</h2>
+
+        <p>
+          Kişisel verileriniz hakkında sorularınız, talep ve şikayetleriniz için
+          lütfen aşağıdaki iletişim kanalını kullanınız:
+        </p>
+
+        <div class="contact-box">
+          <p><strong>Telefon:</strong></p>
+          <a href="tel:+905310159160">📞 0531 015 91 60</a>
+        </div>
+
+        <p
+          class="mt-2"
+          style="
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+          "
+        >
+          Talepleriniz en kısa sürede karşılanacaktır.
+        </p>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Mumo Kids Cafe. Tüm hakları saklıdır.</p>
+      <p>Serbest Oyun Alanı • Doğum Günü Organizasyonu • Yaratıcı Atölyeler</p>
+    </footer>
+  </body>
+</html>
