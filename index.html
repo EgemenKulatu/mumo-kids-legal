@@ -299,6 +299,7 @@
         <li><a href="#privacy">Gizlilik Politikası</a></li>
         <li><a href="#rights">Haklarınız</a></li>
         <li><a href="#deletion">Veri Silme</a></li>
+        <li><a href="#camera">Canlı Kamera</a></li>
         <li><a href="#contact">İletişim</a></li>
       </ul>
     </nav>
@@ -342,6 +343,7 @@
           <li>Seans ve rezervasyon işlemlerinin yönetilmesi</li>
           <li>Çocuğa ait seansların takibi ve kayıt altına alınması</li>
           <li>Seans başlangıcı ve bitişi ile ilgili bildirim gönderilmesi</li>
+          <li>Velinin çocuğunu seans süresince canlı kamera görüntüsü üzerinden uzaktan izleyebilmesi</li>
           <li>Acil durumlarda çocuğun sağlık bilgilerine hızlı erişim sağlanması</li>
           <li>Ödeme ve fatura kayıtlarının tutulması</li>
           <li>Hizmet kalitesinin değerlendirilmesi ve iyileştirilmesi</li>
@@ -558,6 +560,47 @@
           Yazılı talep yoluyla yapılan silme işlemleri, talebinizin alınmasından
           itibaren <strong>30 gün içinde</strong> tamamlanır ve size e-posta ile bilgi verilir.
         </p>
+      </section>
+
+      <!-- Camera Live View Section -->
+      <section id="camera">
+        <h2>📹 Canlı Kamera İzleme</h2>
+
+        <p>
+          Mumo Kids Cafe uygulaması, velilerin çocuklarının aktif seans süresince
+          işletme içini <strong>canlı olarak izleyebilmesine</strong> imkân tanıyan
+          bir kamera görüntüleme özelliği sunmaktadır.
+        </p>
+
+        <h3>Nasıl Çalışır?</h3>
+        <ul>
+          <li>Canlı yayın yalnızca <strong>aktif ve süresi dolmamış bir seansı</strong> bulunan veli hesaplarına açılır.</li>
+          <li>Seans sona erdiğinde ya da süre dolduğunda kamera erişimi otomatik olarak engellenir.</li>
+          <li>Yayın bağlantısı (stream URL), Firebase Firestore'da işletme tarafından yapılandırılır ve yalnızca erişim koşulunu sağlayan veli hesaplarına iletilir.</li>
+          <li>Canlı yayın <strong>kaydedilmez</strong>; görüntüler uygulama tarafından depolanmaz.</li>
+        </ul>
+
+        <h3>Kişisel Veri Niteliği</h3>
+        <p>
+          Canlı kamera görüntüsü, bireylerin tanınmasına olanak tanıyabileceğinden
+          KVKK kapsamında <strong>kişisel veri</strong> niteliği taşımaktadır.
+          Bu nedenle yayına erişim yalnızca yetkili veli hesaplarıyla sınırlandırılmış
+          olup herhangi bir kayıt veya üçüncü tarafla paylaşım söz konusu değildir.
+        </p>
+
+        <h3>Hukuki Dayanak</h3>
+        <p>Canlı kamera izleme özelliği aşağıdaki hukuki dayanaklar çerçevesinde sunulmaktadır:</p>
+        <ul>
+          <li><strong>Sözleşmenin ifası (KVKK Madde 5/2-c):</strong> Çocuk bakım ve güvenliğini destekleyen hizmetin sunulabilmesi için gereklidir.</li>
+          <li><strong>Meşru menfaat (KVKK Madde 5/2-f):</strong> Veli güveni ve şeffaflığının sağlanması işletmenin meşru menfaati kapsamındadır.</li>
+        </ul>
+
+        <h3>Güvenlik ve Kısıtlamalar</h3>
+        <ul>
+          <li>Yayın URL'si Firestore güvenlik kurallarıyla korunmaktadır; yalnızca kimlik doğrulaması yapılmış ve aktif seansı onaylanmış kullanıcılar okuyabilir.</li>
+          <li>Veli, yayını yalnızca kendi cihazında izleyebilir; başkasıyla paylaşması teknik olarak engellenmiştir (URL yalnızca doğrulanmış oturuma iletilir).</li>
+          <li>Görüntü kaydı veya ekran görüntüsü alma işletme tarafından yapılmamakta; bu sorumluluk kullanıcıya aittir.</li>
+        </ul>
       </section>
 
       <!-- Contact Section -->
